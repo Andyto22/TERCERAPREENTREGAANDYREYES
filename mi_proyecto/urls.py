@@ -20,7 +20,7 @@ from appcoderAndy.views import curso, listar_cursos, crear_curso, crear_estudian
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('agregar-curso/<str:nombre>/<str:camada>/', curso, name='agregar_curso'),
+    path('agregar-curso/nombre/camada/', curso, name='agregar_curso'),
     path('listar-cursos/', listar_cursos, name='listar_cursos'),
     path('crear-curso/', crear_curso, name='crear_curso'),
     path('crear-estudiante/', crear_estudiante, name='crear_estudiante'),
