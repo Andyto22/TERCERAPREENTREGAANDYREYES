@@ -1,7 +1,13 @@
 from django import forms
-from .models import Curso
+from .models import Curso, Estudiante
 
-class ItemForm(forms.ModelForm):
+class cursosForm(forms.ModelForm):
     class Meta:
         model = Curso
-        fields = ['nombre', 'descripcion']
+        fields = ['nombre','camada']
+
+
+class EstudianteForm(forms.ModelForm):
+    class Meta:
+        model = Estudiante
+        fields = ['nombre', 'apellido', 'email']
