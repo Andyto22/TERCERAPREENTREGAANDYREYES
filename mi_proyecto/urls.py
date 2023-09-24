@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from appcoderAndy.views import curso
-from appcoderAndy.views import listar_cursos
+from appcoderAndy.views import curso, listar_cursos, crear_curso, crear_estudiante
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('agrega - curso/<nombre>/<camada>', curso),
-    path('listas-cursos/', listar_cursos),
+    path('agregar-curso/<str:nombre>/<str:camada>/', curso, name='agregar_curso'),
+    path('listar-cursos/', listar_cursos, name='listar_cursos'),
+    path('crear-curso/', crear_curso, name='crear_curso'),
+    path('crear-estudiante/', crear_estudiante, name='crear_estudiante'),
 ]
